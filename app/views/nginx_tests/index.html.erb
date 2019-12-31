@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nginx Tests</h1>
+<%= link_to '新規作成', new_nginx_test_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nginx_tests.each do |nginx_test| %>
+      <tr>
+        <td><%= nginx_test.title %></td>
+        <td><%= nginx_test.content %></td>
+        <td><%= link_to '詳細', nginx_test %></td>
+        <td><%= link_to '編集', edit_nginx_test_path(nginx_test) %></td>
+        <td><%= link_to '削除', nginx_test, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
