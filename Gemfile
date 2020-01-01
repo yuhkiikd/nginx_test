@@ -38,3 +38,6 @@ gem 'better_errors'
 gem 'binding_of_caller'
 
 gem 'unicorn'
+
+gem 'graphql', '<= 1.7'
+gem 'graphiql-rails', '<= 1.5'
